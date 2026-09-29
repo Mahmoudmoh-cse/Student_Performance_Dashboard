@@ -1,62 +1,36 @@
-# DEPI_final_Project
-Student Performance Dashboard &amp; Ticketing System 
-The Student Performance Dashboard & Ticketing System is a comprehensive data-driven web application built using Streamlit.
-It provides role-based access for students and administrators, integrates data processing pipelines, AI-powered sentiment analysis, and automated email notifications using Apache Airflow and DBT.
+# Student Performance Dashboard & Ticketing System
 
-The system enables students to track academic performance and submit feedback, while administrators manage student data and monitor insights efficiently.
-# System Architecture
-Components
+A data-driven web application built with Streamlit for students and administrators.
 
-Frontend: Streamlit Web Application
+## Features
 
-Data Processing: Pandas
+- Role-based access for students and administrators
+- Academic performance tracking
+- Student feedback submission
+- AI-powered sentiment analysis
+- Automated email notifications
+- Data processing and transformation workflows
 
-Visualization: Matplotlib & NumPy
+## Architecture
 
-Sentiment Analysis: Hugging Face Transformers
+- **Frontend:** Streamlit
+- **Data processing:** Pandas
+- **Visualization:** Matplotlib, NumPy
+- **Sentiment analysis:** Hugging Face Transformers / PyTorch
+- **Workflow automation:** Apache Airflow
+- **Data transformation:** dbt
+- **Storage:** CSV files and SQL database
 
-Workflow Automation: Apache Airflow
+## Data Flow
 
-Data Transformation: DBT
+1. Administrator uploads student data.
+2. Data is cleaned and processed.
+3. Cleaned data is exported and loaded into dbt seeds.
+4. dbt transforms the data.
+5. Students view their scores and submit feedback.
+6. Feedback is analyzed for sentiment.
+7. An Airflow DAG triggers the relevant email workflow.
 
-Database: CSV files & SQL Database
-# Data Flow Summary
+## Tech Stack
 
-Admin uploads data
-
-Data cleaning & processing
-
-Export to students_cleaned.csv
-
-Copy to DBT seeds
-
-dbt seed → Load data
-
-dbt run → Transform data
-
-Students view scores
-
-Students submit feedback
-
-Sentiment analysis
-
-Airflow DAG triggered
-
-Email sent based on sentiment
-# Technical Stack
-
-Python 3.x
-
-Streamlit
-
-Pandas
-
-Matplotlib / NumPy
-
-PyTorch & Transformers
-
-Apache Airflow
-
-DBT
-
-SQL Database
+Python, Streamlit, Pandas, NumPy, Matplotlib, PyTorch, Transformers, Apache Airflow, dbt, SQL.
